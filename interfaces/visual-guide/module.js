@@ -621,7 +621,44 @@ visualGuide.visualGroups = {
 		addons:{
 			type:'content',
 			children:[
-				{type:'row', flex:'h', arrive:function(){$(this).find('.levelBar').each(function(){$(this).objectSettings({level:Math.round(Math.random()*100) + 1});});}, children:[
+				  {type:'htmlTag', tag:'h2', text:'Direction Pad', color:LCARS.colorGen(visualGuide.uiColors).replace('bg-', 'text-')},
+          {type: 'directionPad', style: "width: 50%", children:[
+              {type: 'dpadButton', version: 'axisButton', angle: 0, ring: 0, ringspan: 2, label: "03", color:LCARS.colorGen(visualGuide.uiColors)},
+              {type: 'dpadButton', version: 'ringButton', ring: 0, index: 0, total: 2, quadrant: 0, label: "04", color:LCARS.colorGen(visualGuide.uiColors)},
+              {type: 'dpadButton', version: 'ringButton', ring: 0, index: 1, total: 2, quadrant: 0, label: "05", color:LCARS.colorGen(visualGuide.uiColors)},
+              {type: 'dpadButton', version: 'axisButton', angle: 90, ring: 0, ringspan: 2, label: "06", color:LCARS.colorGen(visualGuide.uiColors)},
+              {type: 'dpadButton', version: 'ringButton', ring: 0, index: 0, total: 2, quadrant: 1, label: "07", color:LCARS.colorGen(visualGuide.uiColors)},
+              {type: 'dpadButton', version: 'ringButton', ring: 0, index: 1, total: 2, quadrant: 1, label: "08", color:LCARS.colorGen(visualGuide.uiColors)},
+              {type: 'dpadButton', version: 'axisButton', angle: 180, ring: 0, ringspan: 2, label: "09", color:LCARS.colorGen(visualGuide.uiColors)},
+              {type: 'dpadButton', version: 'ringButton', ring: 0, index: 0, total: 2, quadrant: 2, label: "10", color:LCARS.colorGen(visualGuide.uiColors)},
+              {type: 'dpadButton', version: 'ringButton', ring: 0, index: 1, total: 2, quadrant: 2, label: "11", color:LCARS.colorGen(visualGuide.uiColors)},
+              {type: 'dpadButton', version: 'axisButton', angle: 270, ring: 0, ringspan: 2, label: "12", color:LCARS.colorGen(visualGuide.uiColors)},
+              {type: 'dpadButton', version: 'ringButton', ring: 0, index: 0, total: 2, quadrant: 3, label: "01", color:LCARS.colorGen(visualGuide.uiColors)},
+              {type: 'dpadButton', version: 'ringButton', ring: 0, index: 1, total: 2, quadrant: 3, label: "02", color:LCARS.colorGen(visualGuide.uiColors)},
+
+              {type: 'dpadButton', version: 'ringButton', ring:1, ringspan: 3, index:0, total: 4, label: 'PM', quadrant: 1, color:LCARS.colorGen(visualGuide.uiColors)},
+              {type: 'dpadButton', version: 'ringButton', ring:1, ringspan: 3, index:1, total: 4, buttonspan: 2, label: 'MODE', quadrant: 1, color:LCARS.colorGen(visualGuide.uiColors)},
+              {type: 'dpadButton', version: 'ringButton', ring:1, ringspan: 3, index:3, total: 4, label: 'AM', quadrant: 1, color:LCARS.colorGen(visualGuide.uiColors)},
+
+              {type: 'dpadButton', version: 'ringButton', ring:1, ringspan: 3, index:4, total: 8, buttonspan: 2, quadrant: 2, color:LCARS.colorGen(visualGuide.uiColors), noEvent: true},
+              {type: 'dpadButton', version: 'ringButton', ring:1, ringspan: 3, index:2, total: 8, buttonspan: 2, quadrant: 3, color:LCARS.colorGen(visualGuide.uiColors), noEvent: true},
+              {type: 'dpadButton', version: 'axisButton', angle: 270, ring: 2, ringspan: 2, color:LCARS.colorGen(visualGuide.uiColors), noEvent: true},
+
+              {type: 'dpadButton', version: 'ringButton', ring:1, ringspan: 2, index:0, total: 1, label: 'RESET', quadrant: 0, color:LCARS.colorGen(visualGuide.uiColors)},
+              
+              
+              {type: 'dpadButton', version: 'centerButton', color:LCARS.colorGen(visualGuide.uiColors), noEvent: true},
+              {type: 'dpadButton', version: 'directionButton', angle: 0, color:LCARS.colorGen(visualGuide.uiColors)},
+              {type: 'dpadButton', version: 'directionButton', angle: 90, color:LCARS.colorGen(visualGuide.uiColors)},
+              {type: 'dpadButton', version: 'directionButton', angle: 180, color:LCARS.colorGen(visualGuide.uiColors)},
+              {type: 'dpadButton', version: 'directionButton', angle: 270, color:LCARS.colorGen(visualGuide.uiColors)},
+              {type: 'dpadButton', version: 'quadrantButton', quadrant: 0, color:LCARS.colorGen(visualGuide.uiColors), noEvent: true},
+              {type: 'dpadButton', version: 'quadrantButton', quadrant: 1, color:LCARS.colorGen(visualGuide.uiColors), noEvent: true},
+              {type: 'dpadButton', version: 'quadrantButton', quadrant: 2, color:LCARS.colorGen(visualGuide.uiColors), noEvent: true},
+              {type: 'dpadButton', version: 'quadrantButton', quadrant: 3, color:LCARS.colorGen(visualGuide.uiColors), noEvent: true},
+          ]},
+
+          {type:'row', flex:'h', arrive:function(){$(this).find('.levelBar').each(function(){$(this).objectSettings({level:Math.round(Math.random()*100) + 1});});}, children:[
 					{type:'column', flexC:'h', children:[
 						{type:'htmlTag', tag:'h2', text:'Level Bar Horizontal', style:'text-align:center;', color:LCARS.colorGen(visualGuide.uiColors).replace('bg-', 'text-')},
 						{type:'levelBar', arrive:visualGuide.events.animateLevelBar.init, color:LCARS.colorGen(visualGuide.uiColors), label:'50', level:50, labelLink:'label'},
@@ -665,8 +702,7 @@ visualGuide.visualGroups = {
 					{type:'column', children:[
 						{type:'levelBar', orient:'vertical', noEvent:true, direction:'reverse', color:LCARS.colorGen(visualGuide.uiColors), altLabel:'100', level:0},
 					]}
-				]},
-				
+				]},                           
 				{type:'htmlTag', tag:'h2', text:'Scroll Button', color:LCARS.colorGen(visualGuide.uiColors).replace('bg-', 'text-')},
 				{type:'row', children:[
 					{type:'column',  children:[

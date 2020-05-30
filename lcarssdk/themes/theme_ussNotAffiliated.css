@@ -8,48 +8,57 @@
 [class*="bg-"] > *:not([class*="bg-"]){
 	background-color:#003366;
 	border-color:#003366;	
+	fill:#003366;	
 }
 
 .bg-blue-1,
 .bg-blue-1 > *:not([class*="bg-"]){
 	background-color:#99ccff;
 	border-color:#99ccff;	
+/*  fill:#99ccff;	*/
 }
 .bg-blue-2,
 .bg-blue-2 > *:not([class*="bg-"]){
 	background-color:#3399cc;
 	border-color:#3399cc;	
+  fill:#3399cc;	
 }
 .bg-blue-3,
 .bg-blue-3 > *:not([class*="bg-"]){
 	background-color:#006699;
 	border-color:#006699;
+  fill:#006699;	
 }
 .bg-blue-4,
 .bg-blue-4 > *:not([class*="bg-"]){
 	background-color:#003366;
 	border-color:#003366;	
+  fill:#003366;	
 }
 
 .bg-green-1,
 .bg-green-1 > *:not([class*="bg-"]){
 	background-color:#ccddbb;
 	border-color:#ccddbb;	
+  fill:#ccddbb;	
 }
 .bg-green-2,
 .bg-green-2 > *:not([class*="bg-"]){
 	background-color:#00cc99;
 	border-color:#00cc99;	
+  fill:#00cc99;	
 }
 .bg-green-3,
 .bg-green-3 > *:not([class*="bg-"]){
 	background-color:#009999;
 	border-color:#009999;	
+  fill:#009999;	
 }
 .bg-green-4,
 .bg-green-4 > *:not([class*="bg-"]){
 	background-color:#006666;
 	border-color:#006666;	
+  fill:#006666;	
 }
 
 /* Color by Name for Complex Buttons */
@@ -195,4 +204,5 @@
 .button:not(.endcap):active, 
 .endcap:active > .cap, 
 .elbow:active,
-.complexButton:active > *:not(.text){-webkit-animation:none !important;animation:none !important; background-color:#ffffff !important; border-color:#ffffff !important;}
+.complexButton:active > *:not(.text),
+.button:active > *:not(text):not(.dpadDecoration){-webkit-animation:none !important;animation:none !important; background-color:#ffffff !important; border-color:#ffffff !important; fill:#ffffff !important}

@@ -1228,7 +1228,7 @@ var LCARS = {
 						$(elemNB).width(0);
 					}else{
 						var textLength = args.args.text.length;
-						console.log(textLength);
+						  //console.log(textLength);
 						var textWidth = (textLength * 25) + ((textLength-1) * 5) + 10;
 						$(elemNB).width(textWidth);
 						$(elemNB).text(args.args.text);

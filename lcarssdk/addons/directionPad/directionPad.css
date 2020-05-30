@@ -1,0 +1,14 @@
+.directionPad text {
+    letter-spacing: -0.5px;	
+    text-transform: uppercase;
+	  line-height:1.25;
+    font-size: 9px;
+}
+
+.dpadButton > text {
+    fill: black;
+}
+
+.dpadButton:active > .dpadDecoration {
+    fill: black;
+}
