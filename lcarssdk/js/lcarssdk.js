@@ -241,7 +241,9 @@ var LCARS = {
         click:function(args){
             var elemID = $(args.element).attr('id');
             var targetObj = allObjects[elemID];              
-            if(args.args.click != null && webviewInfo.input !== 'touch'){
+            if(args.args.click != null) {
+                //Commented out because click should work like touch
+            //            if(args.args.click != null && webviewInfo.input !== 'touch'){
                 if(targetObj.click){$(args.element).off('click', targetObj.click);}
                 targetObj.click = args.args.click;              
                 if(targetObj.type === 'radio' || targetObj.type === 'checkbox'){
